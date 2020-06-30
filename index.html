@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e0dc62ea01.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-9">
+          <form id="search-form">
+            <input
+              type="search"
+              placeholder="Enter a city"
+              autofocus="on"
+              autocomplete="off"
+              id="search-city"
+            />
+            <input type="submit" value="Search" />
+          </form>
+        </div>
+        <div class="col-3">
+          <button id="location-button">Your location</button>
+        </div>
+      </div>
+      <br />
+
+      <div class="row">
+        <div class="col-5">
+          <h1>
+            Edinburgh
+          </h1>
+          <h3>
+            <span id="day-time">Wednesday 16:00</span>
+            <br />
+            <span id="description">Partly cloudy</span>
+          </h3>
+        </div>
+
+        <div class="col-4">
+          <h2>
+            <span id="current-temperature">16</span>
+            <span class="units"
+              ><a href="#" id="celsius-link">°C</a> |<a
+                href="#"
+                id="fahrenheit-link"
+                >°F</a
+              ></span
+            >
+          </h2>
+        </div>
+
+        <div class="col-3">
+          <h2>
+            <i class="fas fa-cloud-sun current-icon"></i>
+          </h2>
+          <h6>
+            Humidity: <span id="humidity">60</span>%
+            <br />
+            Wind: <span id="wind">3.6</span> km/h
+          </h6>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 next-day">
+          Thu
+          <br />
+          <i class="fas fa-cloud-showers-heavy"></i>
+          <br />
+          13°
+        </div>
+        <div class="col-2 next-day">
+          Fri
+          <br />
+          <i class="fas fa-cloud-sun-rain"></i>
+          <br />
+          14°
+        </div>
+        <div class="col-2 next-day">
+          Sat
+          <br />
+          <i class="fas fa-cloud-sun"></i>
+          <br />
+          15°
+        </div>
+        <div class="col-2 next-day">
+          Sun
+          <br />
+          <i class="fas fa-sun"></i>
+          <br />
+          17°
+        </div>
+        <div class="col-2 next-day">
+          Mon
+          <br />
+          <i class="fas fa-cloud"></i>
+          <br />
+          14°
+        </div>
+        <div class="col-2 next-day">
+          Tue
+          <br />
+          <i class="fas fa-sun"></i>
+          <br />
+          18°
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
