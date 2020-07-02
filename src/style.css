@@ -1,7 +1,7 @@
 .container {
   display: block;
   max-width: 700px;
-  background-image: linear-gradient(190deg, #87bef2 0%, #448ded 100%);
+  background-image: linear-gradient(190deg, #0481b3 0%, #036aaf 100%);
   padding: 20px 25px;
   margin: 20px auto;
   border-radius: 20px;
@@ -38,8 +38,8 @@ input {
   position: relative;
   top: -24px;
 }
-.current-icon {
-  font-size: 60px;
+#current-icon {
+  height: 64px;
 }
 h3 {
   font-size: 26px;
@@ -51,9 +51,6 @@ h6 {
   margin-top: 30px;
   font-size: 22px;
   text-transform: uppercase;
-}
-i {
-  font-size: 28px;
 }
 .github-link {
   color: #707070;
