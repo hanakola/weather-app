@@ -27,15 +27,20 @@ dayTime.innerHTML = `${day} ${hours}:${minutes}`;
 function showTemperature(response) {
   let heading = document.querySelector("h1");
   heading.innerHTML = response.data.name;
-  let temperature = Math.round(response.data.main.temp);
+
   let currentTemperature = document.querySelector("#current-temperature");
-  currentTemperature.innerHTML = temperature;
+  celsiusTemperature = response.data.main.temp;
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].main;
+
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
+
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed * 3.6);
+
   let currentIcon = document.querySelector("#current-icon");
   currentIcon.setAttribute(
     "src",
@@ -45,18 +50,22 @@ function showTemperature(response) {
 
 //Search city
 
-function searchEngine(event) {
-  event.preventDefault();
-  let searchCity = document.querySelector("#search-city");
-  let city = searchCity.value;
+function search(city) {
   let apiKey = "8cf2c4837407c5b40baa70eb9a2a5711";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${city}`;
   axios.get(apiUrl).then(showTemperature);
 }
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchCity = document.querySelector("#search-city");
+  search(searchCity.value);
+}
+
+search("Edinburgh");
+
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", searchEngine);
+form.addEventListener("submit", handleSubmit);
 
 //Current location
 
