@@ -25,8 +25,8 @@ dayTime.innerHTML = `${day} ${hours}:${minutes}`;
 //Show temperature and description
 
 function showTemperature(response) {
-  let heading = document.querySelector("h1");
-  heading.innerHTML = response.data.name;
+  let cityName = document.querySelector("h1");
+  cityName.innerHTML = response.data.name;
 
   let currentTemperature = document.querySelector("#current-temperature");
   celsiusTemperature = response.data.main.temp;
@@ -148,5 +148,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+//City on load
 
 search("Edinburgh");

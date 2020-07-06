@@ -33,7 +33,7 @@ input {
   font-size: 60px;
   text-align: center;
 }
-.units {
+#units {
   font-size: 25px;
   text-align: center;
   position: relative;
@@ -48,17 +48,19 @@ input {
 #current-icon {
   height: 64px;
 }
-h3 {
+#day-time,
+#description {
   font-size: 26px;
 }
-h6 {
+#humidity,
+#wind {
   font-size: 16px;
 }
 #forecast {
   margin-top: 30px;
   font-size: 20px;
 }
-.github-link {
+#github-link {
   color: #707070;
   font-family: monospace;
   font-size: 14px;
