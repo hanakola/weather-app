@@ -1,6 +1,9 @@
-Weather App
+# Weather App
 
-My first Vanilla Javascript Project - using OpenWeatherMap API, designed preferably for desktop
+Vanilla JavaScript Weather App - built using HTML, CSS, Bootstrap for responsive design, OpenWeatherMap API, Vanilla JavaScript
 
 Hosted on Netlify:
 https://determined-allen-4d33a7.netlify.app/
+
+
+![Weather App](images/weather-app.PNG)
