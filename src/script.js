@@ -73,7 +73,7 @@ function showForecast(response) {
   for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
-    <div class="col-4 col-sm-2">
+    <div class="col-4 col-sm-2 text-center">
        ${formatHours(forecast.dt * 1000)}
        <br />
        <img src="images/${forecast.weather[0].icon}.png" width="50" />
